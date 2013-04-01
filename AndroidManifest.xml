@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flashlightwidget"
+    android:versionCode="3"
+    android:versionName="3" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+       <receiver android:name=".FlashlightWidget" 
+           android:icon="@drawable/icon" 
+           android:label="@string/app_name">
+         <intent-filter>
+            <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+         </intent-filter>
+
+         <meta-data android:name="android.appwidget.provider"
+                        android:resource="@xml/widget_info" />
+		</receiver>
+		 <service android:name=".FlashlightWidgetService"></service>
+    </application>
+
+</manifest>

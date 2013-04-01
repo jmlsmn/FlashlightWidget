@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera">This device does not have a camera.</string>
+    <string name="no_flash">This device does not have a flash.</string>
+    <string name="app_name">Flashlight Widget</string>
+</resources>
